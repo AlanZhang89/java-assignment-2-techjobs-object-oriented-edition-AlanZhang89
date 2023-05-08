@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
  */
 @RunWith(JUnit4.class)
 public class JobTest {
+
     @Test
     public void testSettingJobId() {
         Job job1 = new Job();
@@ -58,5 +59,18 @@ public class JobTest {
                 "Core Competency: " + job.getCoreCompetency() + "\n";
         assertEquals(expectedOutput, jobString);
     }
+    @Test
+    public void testToStringHandlesEmptyField() {
+        Job job = new Job();
+        String expectedOutput = "\nID: " + job.getId() + "\nName: " + job.getName() + "\nEmployer: " + job.getEmployer() +
+                "\nLocation: " + job.getLocation() + "\nPosition Type: " + job.getPositionType() +
+                "\nCore Competency: " + job.getCoreCompetency() + "\n";
+        String actualOutput = job.toString();
+        assertEquals(expectedOutput, actualOutput);
+        // add two more assertions to check for the correct output format
+        assertTrue(actualOutput.startsWith("\n"));
+        assertTrue(actualOutput.endsWith("\n"));
+    }
+
 
 }
