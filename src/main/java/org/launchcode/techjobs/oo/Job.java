@@ -46,11 +46,11 @@ public class Job {
 
     @Override
     public String toString() {
-        String nameValue = (name == null) ? "" : name;
-        String employerValue = (employer == null) ? "" : String.valueOf(employer);
-        String locationValue = (location == null) ? "" : String.valueOf(location);
-        String positionTypeValue = (positionType == null) ? "" : String.valueOf(positionType);
-        String coreCompetencyValue = (coreCompetency == null) ? "" : String.valueOf(coreCompetency);
+        String nameValue = (name == null) ? "null" : name;
+        String employerValue = (employer == null) ? "null" : String.valueOf(employer);
+        String locationValue = (location == null) ? "null" : String.valueOf(location);
+        String positionTypeValue = (positionType == null) ? "null" : String.valueOf(positionType);
+        String coreCompetencyValue = (coreCompetency == null) ? "null" : String.valueOf(coreCompetency);
 
         return "\nID: " + id + "\nName: " + nameValue + "\nEmployer: " + employerValue + "\nLocation: " + locationValue + "\nPosition Type: " + positionTypeValue + "\nCore Competency: " + coreCompetencyValue + "\n";
     }
